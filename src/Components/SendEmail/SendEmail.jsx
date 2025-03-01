@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { recordNewReport } from "../../firebase";
 
 const SendEmail = ({ to, subject, message, disabled /*accessToken*/ }) => {
   const [status, setStatus] = useState("");
@@ -36,7 +37,14 @@ const SendEmail = ({ to, subject, message, disabled /*accessToken*/ }) => {
       });
 
       if (response.ok) {
-        setStatus("✅ Email sent successfully!");
+        // Record the report in Firebase
+        try {
+          await recordNewReport();
+          setStatus("✅ Email sent successfully!");
+        } catch (firebaseErr) {
+          console.error("Error recording report:", firebaseErr);
+          setStatus("✅ Email sent successfully! (Stats not updated)");
+        }
       } else {
         const errorData = await response.json();
         setStatus(`❌ Error sending email: ${errorData.error.message}`);
@@ -51,7 +59,7 @@ const SendEmail = ({ to, subject, message, disabled /*accessToken*/ }) => {
 
   return (
     <div>
-      <button onClick={sendEmail} disabled={disabled}>
+      <button className="send-button" onClick={sendEmail}>
         Send Email
       </button>
       <p>{status}</p>
