@@ -16,9 +16,9 @@
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
     overflow-y: auto;
 }
 
@@ -29,7 +29,8 @@
     color: #ffffff;
     line-height: 1.1;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .info-container > header {
@@ -38,9 +39,9 @@
 
 .stats-overview {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .stat-box {
@@ -48,41 +49,67 @@
     border-radius: 8px;
     padding: 20px;
     width: 45%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
 }
 
 .stat-box h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #cccccc;
 }
 
 .big-number {
     font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 700;
     color: #ff4b4b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .charts-row {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .chart-container {
-    width: 30%; /* Adjust this value as needed */
-    margin-bottom: 20px;
+    width: 45%;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    height: 400px; /* Added fixed height */
 }
 
 .chart-container h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px; /* Reduced font size to fit better */
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: center;
+    color: #ffffff;
+    align-self: flex-start; /* Added to keep title at the top */
+    width: 100%; /* Ensure title takes full width */
 }
 
-/* You might need to add this to ensure charts don't overflow */
+.chart-wrapper {
+    width: 100%;
+    height: 350px; /* Increased height for bigger chart */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .chart-container canvas {
     max-width: 100%;
     height: auto !important;
@@ -91,70 +118,53 @@
 .info-text {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     color: #ffffff;
     line-height: 1.6;
     text-align: left;
     width: 100%;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .info-text h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
+    color: #ff4b4b;
+    text-align: center;
 }
 
 .info-text ul {
     padding-left: 20px;
+    list-style-type: none;
 }
 
 .info-text li {
-    margin-bottom: 10px;
-}
-
-.sources-section {
-    width: 100%;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.sources-section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
     margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
 }
 
-.sources-section button {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #ff4b4b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.sources-section button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-.sources-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sources-list li {
-    margin-bottom: 10px;
-}
-
-.sources-list a {
+.info-text li:before {
+    content: '•';
     color: #ff4b4b;
-    text-decoration: none;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
-.sources-list a:hover {
-    text-decoration: underline;
+@media (max-width: 768px) {
+    .stats-overview, .charts-row {
+        flex-direction: column;
+    }
+
+    .stat-box, .chart-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
+

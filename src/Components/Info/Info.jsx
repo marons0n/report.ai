@@ -8,46 +8,12 @@ import { createChatSession } from '../../utils';
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, LineElement, PointElement, Title, Tooltip, Legend);
 
 function Info({ setIsSignedIn }) {
-    const [sources, setSources] = useState([]);
-    const [isLoadingSources, setIsLoadingSources] = useState(false);
-    const [chatSession, setChatSession] = useState(null);
-
-    useEffect(() => {
-        const session = createChatSession();
-        setChatSession(session);
-        fetchSources();
-    }, []);
-
-    const fetchSources = async () => {
-        if (!chatSession) return;
-        setIsLoadingSources(true);
-        try {
-            const result = await chatSession.sendMessage("Generate 10 article titles and URLs about college hate crimes for educational purposes. Format the response as a JSON array of objects, each with 'title' and 'url' properties.");
-            const response = await result.response.text();
-            const cleaned = response.replace(/^``````\s*$/g, '');
-            const parsedSources = JSON.parse(cleaned);
-            setSources(parsedSources);
-        } catch (error) {
-            console.error('Error fetching sources:', error);
-        } finally {
-            setIsLoadingSources(false);
-        }
-    };
-
-    const hateCrimesByAccreditor = {
-        labels: ['NECHE', 'MSCHE', 'NWCCU', 'HLC', 'WASC', 'SACSCOC'],
-        datasets: [{
-            label: 'Hate Crimes per 100,000 FTE students',
-            data: [12.97, 9.95, 7.54, 6.69, 5.10, 3.23],
-            backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        }]
-    };
 
     const typesOfHateCrimes = {
-        labels: ['Intimidation', 'Destruction of property', 'Simple assault'],
+        labels: ['Intimidation', 'Destruction of property', 'Assault'],
         datasets: [{
             data: [1758, 1703, 390],
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+            backgroundColor: ['#ff4b4b', '#9a3333', '#f87878'],
         }]
     };
 
@@ -57,7 +23,8 @@ function Info({ setIsSignedIn }) {
             label: 'Reported Hate Crime Offenses',
             data: [700, 911, 500, 896, 1336],
             fill: false,
-            borderColor: 'rgb(75, 192, 192)',
+            borderColor: '#ff4b4b',
+            
             tension: 0.1
         }]
     };
@@ -80,23 +47,82 @@ function Info({ setIsSignedIn }) {
                 </div>
 
                 <div className="charts-row">
-                    <div className="chart-container">
-                        <h2>Hate Crimes by Accreditor</h2>
-                        <Bar data={hateCrimesByAccreditor} />
-                    </div>
+
+                
                     <div className="chart-container">
                         <h2>Types of Hate Crimes on Campuses</h2>
-                        <Pie data={typesOfHateCrimes} />
+                        <div className="chart-wrapper">
+                        <Pie 
+                            data={typesOfHateCrimes} 
+                            options={{
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    legend: {
+                                        position: 'right',
+                                        align: 'center',
+                                        labels: {
+                                            boxWidth: 10,
+                                            padding: 20,
+                                            font: {
+                                                size: 14
+                                            }
+                                        }
+                                    }
+                                },
+                                layout: {
+                                    padding: {
+                                        left: 50,
+                                        right: 50,
+                                        top: 0,
+                                        bottom: 0
+                                    }
+                                }
+                            }}
+                        />
+
+                        </div>
                     </div>
                     <div className="chart-container">
                         <h2>Reported Hate Crime Offenses by Year</h2>
-                        <Line data={hateCrimesTrend} />
+                        <Line 
+                            data={hateCrimesTrend} 
+                            options={{
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                scales: {
+                                    x: {
+                                        grid: {
+                                            color: 'rgba(255, 255, 255, 0.1)'  // Light grid lines
+                                        },
+                                        ticks: {
+                                            color: '#ffffff'  // White text for x-axis labels
+                                        }
+                                    },
+                                    y: {
+                                        grid: {
+                                            color: 'rgba(255, 255, 255, 0.1)'  // Light grid lines
+                                        },
+                                        ticks: {
+                                            color: '#ffffff'  // White text for y-axis labels
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            color: '#ffffff'  // White text for legend
+                                        }
+                                    }
+                                }
+                            }}
+                        />
+
                     </div>
                 </div>
 
                 <div className="info-text">
-                    <h2>Key Findings</h2>
-                    <ul>
+                     <ul>
                         <li>In 2022, 10% of all reported hate crimes in the U.S. occurred at schools or on college campuses.</li>
                         <li>Anti-Black hate crimes were the most frequently reported (1,690 offenses), followed by anti-LGBTQ (901 offenses) and anti-Jewish (745 offenses) between 2018-2022.</li>
                         <li>Experts caution that hate crimes tend to be significantly underreported by both victims and local law enforcement.</li>
@@ -104,21 +130,6 @@ function Info({ setIsSignedIn }) {
                     </ul>
                 </div>
 
-                <div className="sources-section">
-                    <h2>Educational Resources on College Hate Crimes</h2>
-                    <button onClick={fetchSources} disabled={isLoadingSources}>
-                        {isLoadingSources ? 'Refreshing...' : 'Refresh Sources'}
-                    </button>
-                    <ul className="sources-list">
-                        {sources.map((source, index) => (
-                            <li key={index}>
-                                <a href={source.url} target="_blank" rel="noopener noreferrer">
-                                    {source.title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </div>
         </div>
     );
