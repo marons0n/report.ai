@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createChatSession } from '../../utils';
 import Header from '../Header/Header';
 import './Home.css';
-import SendEmail from '../SendEmail/SendEmail';
 import EmailModal from '../EmailModal/EmailModal'; // Import the modal
 
 function Home({ setIsSignedIn }) {
