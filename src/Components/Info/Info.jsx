@@ -4,16 +4,41 @@ import './Info.css';
 import { Bar, Pie, Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
 import { createChatSession } from '../../utils';
+import { getReportStats } from '../../firebase';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, LineElement, PointElement, Title, Tooltip, Legend);
 
 function Info({ setIsSignedIn }) {
+    const [reportStats, setReportStats] = useState({ totalReports: 0 });
+
+    useEffect(() => {
+        const fetchStats = async () => {
+            try {
+                const stats = await getReportStats();
+                setReportStats(stats);
+            } catch (error) {
+                console.error('Error fetching report stats:', error);
+            }
+        };
+
+        fetchStats();
+
+        const intervalId = setInterval(fetchStats, 30000);
+
+        return () => clearInterval(intervalId);
+    }, []);
 
     const typesOfHateCrimes = {
         labels: ['Intimidation', 'Destruction of property', 'Assault'],
         datasets: [{
             data: [1758, 1703, 390],
-            backgroundColor: ['#ff4b4b', '#9a3333', '#f87878'],
+            backgroundColor: [
+                '#ff4b4b',  // Bright red
+                '#ff8c8c',  // Lighter red
+                '#b30000'   // Darker red
+            ],
+            borderColor: '#1b1b1b',
+            borderWidth: 2
         }]
     };
 
@@ -36,6 +61,15 @@ function Info({ setIsSignedIn }) {
                 <h1 className="hero-heading">Hate Crimes on College Campuses</h1>
 
                 <div className="stats-overview">
+                    <div className="stat-box">
+                        <h3>Reports submitted through report.ai</h3>
+                        <p className="big-number">{reportStats.totalReports}</p>
+                        {reportStats.lastReportTimestamp && (
+                            <p className="last-report">
+                                Last report: {new Date(reportStats.lastReportTimestamp.seconds * 1000).toLocaleDateString()}
+                            </p>
+                        )}
+                    </div>
                     <div className="stat-box">
                         <h3>Total reported on-campus hate crimes (2015-2021)</h3>
                         <p className="big-number">4,246</p>
@@ -62,10 +96,23 @@ function Info({ setIsSignedIn }) {
                                         position: 'right',
                                         align: 'center',
                                         labels: {
-                                            boxWidth: 10,
+                                            color: '#ffffff',  // Set legend text color to white
+                                            boxWidth: 15,
                                             padding: 20,
                                             font: {
-                                                size: 14
+                                                size: 14,
+                                                weight: '500'  // Make text slightly bolder for better visibility
+                                            }
+                                        }
+                                    },
+                                    tooltip: {
+                                        callbacks: {
+                                            label: (context) => {
+                                                const label = context.label || '';
+                                                const value = context.raw || 0;
+                                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                                const percentage = ((value / total) * 100).toFixed(1);
+                                                return `${label}: ${value} (${percentage}%)`;
                                             }
                                         }
                                     }
