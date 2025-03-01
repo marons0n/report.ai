@@ -1,0 +1,80 @@
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #e7ecef;
+    color: #ff4b4b;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+.logo-section {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section:hover {
+    transform: scale(1.05);
+}
+
+.home-logo {
+    width: 77px;
+    height: 111px;
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff4b4b;
+}
+
+.report {
+
+}
+
+.info {
+
+}
+
+.about {
+
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.profile-button img {
+    width: 190%;
+    height: auto;
+    background: transparent;
+}
+
+.profile-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}

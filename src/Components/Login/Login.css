@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&family=Montserrat:wght@500;700&display=swap');
+
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Optional background image overlay */
+.login-container::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: url('background2.png') center/cover no-repeat;
+  /* opacity: 0.4;  // If you want a 40% tinted background */
+  z-index: -1;
+}
+
+/* Header with logo + brand text at the top-left */
+.login-container header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Force your logo dimension */
+.login-logo {
+  width: 77px;
+  height: 111px;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #ff4b4b;
+}
+
+/* 
+  Center the content vertically/horizontally 
+*/
+.login-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 
+  EXACT two lines, ignoring screen size:
+    - Insert <br> in JSX
+    - white-space: nowrap => no wrapping
+    - Then let <br> be the ONLY place it can break
+*/
+.hero-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 80px;
+    color: #E7ECEF;
+  
+    white-space: nowrap;   /* Only break at <br> */
+    line-height: 1.1;      /* Tighter spacing between heading lines */
+    margin-bottom: 10px;   /* Less space beneath the heading */
+  }
+  
+
+/* EXACT three lines in subheader via <br>, also no wrapping beyond that */
+.subheader {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #E7ECEF;
+  line-height: 1.4;
+  margin-bottom: 30px;
+
+  white-space: nowrap; /* again, no wrapping except <br> */
+  /* If text is too wide, it might overflow. 
+     You can add overflow-x: auto; or a media query to reduce font. */
+}
+
+/* Red \"Get Started\" button */
+.login-button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 33px;
+  color: #E7ECEF;
+  background-color: #ff4b4b;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #d93838;
+}
+
+.login-button:active {
+  transform: scale(0.96);
+}
