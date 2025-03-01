@@ -136,7 +136,6 @@ function Info({ setIsSignedIn }) {
                             data={hateCrimesTrend} 
                             options={{
                                 responsive: true,
-                                maintainAspectRatio: false,
                                 scales: {
                                     x: {
                                         grid: {
