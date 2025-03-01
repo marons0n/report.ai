@@ -52,10 +52,10 @@ Our mission is to create safer and more inclusive educational environments by:
 
 ## Team
 
-- Matt Aronson (<maa326@lehigh.edu>): Backend Integration
-- Dan Novick (<dbn226@lehigh.edu>): AI Specialist
-- Josh Berdon (<job426@lehigh.edu>): Database Manager
-- Evan Smith (<ersa26@lehigh.edu>): UI/UX Specialist
+- [Matt Aronson](https://www.linkedin.com/in/matt-aronson1/) (<maa326@lehigh.edu>): Backend Integration
+- [Daniel Novick](https://www.linkedin.com/in/danielbnovick/) (<dbn226@lehigh.edu>): AI Specialist
+- [Josh Berdon](https://www.linkedin.com/in/josh-berdon/) (<job426@lehigh.edu>): Database Manager
+- [Evan Smith](https://www.linkedin.com/in/evansmith2026/) (<ersa26@lehigh.edu>): UI/UX Specialist
 
 ## Future Directions
 
@@ -68,3 +68,9 @@ We are committed to continually improving report.ai. Future enhancements may inc
 ## Contact
 
 For more information or to report issues, please contact us at [report.ai.site@gmail.com](mailto:report.ai.site@gmail.com).
+
+## References
+
+https://bjs.ojp.gov/topics/crime/hate-crime
+https://lasd.org/transparency/hatecrime/
+https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention
