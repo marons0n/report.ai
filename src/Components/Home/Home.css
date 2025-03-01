@@ -44,7 +44,7 @@
 
 .nav-menu a {
   text-decoration: none;
-  color: #ff4b4b;
+  color: #e7ecef;
   font-weight: 500;
 }
 
@@ -123,7 +123,6 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  border: white 2px;
 }
 
 /* Center chat messages in middle 50% */
@@ -132,15 +131,12 @@
   width: 50%;
   max-width: 800px;
   max-height: 450px;
-  margin: 20px auto;  /* center horizontally */
+  margin: 20px auto;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: transparent; /* Optional: Set background to transparent */
-  color: white; /* White text */
-  border: none; /* Removes border */
-
+  color: white;
 }
 
 /* Message bubbles */
@@ -179,6 +175,7 @@
   align-items: center; /* Ensures all items remain the same height */
   justify-content: space-between;
   gap: 10px;
+  border-radius: 10px; /* Rounded container */
 }
 
 /* Input box */
@@ -192,19 +189,15 @@
   outline: none;
 }
 
-.send-bar input::placeholder {
-  color: #999;
-}
-
 /* Send button */
 .send-bar .send-button {
   background-color: #ff4b4b;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 12px 20px;
   font-size: 1rem;
-  height: 44px; /* Explicitly set height */
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,10 +209,7 @@
   background-color: #d93838;
 }
 
-/* 
-  Gmail Review Email Button 
-  Now it explicitly matches the height of the Send button 
-*/
+/* Gmail Review Email Button */
 .gmail-pill-btn {
   display: flex;
   align-items: center;
@@ -227,22 +217,20 @@
   background-color: #ff4b4b;
   color: #fff;
   border: none;
-  border-radius: 5px; /* Rounded rectangle */
-  width: 50px;
-  height: 44px; /* Matches Send button height */
+  border-radius: 10px;
+  width: 60px;
+  height: 44px;
   padding: 0 10px;
   overflow: hidden;
   transition: width 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
-/* Gmail icon stays centered */
 .gmail-icon {
   width: 24px;
   height: 24px;
 }
 
-/* Hide text initially */
 .gmail-text {
   display: none;
   margin-left: 8px;
@@ -258,100 +246,4 @@
 
 .gmail-pill-btn:hover .gmail-text {
   display: inline-block;
-}
-
-/************************************************
-  6) RESPONSIVENESS (For Smaller Screens)
-************************************************/
-@media (max-width: 768px) {
-  .chat-messages,
-  .send-bar {
-    width: 90%;
-  }
-}
-
-
-
-/************************************************
-  6) PILL-SHAPED GMAIL ICON BUTTON
-************************************************/
-/*
-   A rounded pill shape (50px tall, 50px wide initially).
-   On hover, expands horizontally to show text.
-*/
-.gmail-pill-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; /* center the icon */
-  background-color: #ff4b4b;
-  color: #fff;
-  border: none;
-  border-radius: 25px; /* Half of 50px => rounded pill */
-  width: 50px;
-  height: 100%;
-  padding: 0 8px;
-  overflow: hidden;
-  transition: width 0.3s ease, background-color 0.3s ease;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
-.gmail-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-/* Hide the text by default */
-.gmail-text {
-  display: none;
-  margin-left: 8px;
-  white-space: nowrap;
-  font-size: 0.9rem;
-}
-
-/* Expand on hover */
-.gmail-pill-btn:hover {
-  width: 160px; /* Enough to fit the text */
-  background-color: #d93838;
-}
-
-.gmail-pill-btn:hover .gmail-text {
-  display: inline-block;
-}
-
-/************************************************
-  7) RESPONSIVENESS (For Smaller Screens)
-************************************************/
-@media (max-width: 768px) {
-  .chat-messages,
-  .send-bar {
-    width: 90%;
-  }
-}
-
-
-.chat-textarea {
-  width: 100%;
-  height: 300px; /* Fixed height */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: white;
-  resize: none; /* Prevents resizing */
-  overflow-y: auto; /* Enables scrolling */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  scroll-behavior: smooth; /* Enables smooth scrolling */
-  white-space: pre-wrap; /* Preserves line breaks */
-}
-
-
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent double scrollbars */
 }

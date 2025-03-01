@@ -1,5 +1,6 @@
 import React from 'react';
 import './EmailModal.css';
+import SendEmail from '../SendEmail/SendEmail';
 
 function EmailModal({ subject, message, onClose, onSend }) {
   return (
@@ -9,7 +10,13 @@ function EmailModal({ subject, message, onClose, onSend }) {
         <p><strong>Subject:</strong> {subject}</p>
         <textarea className="email-body" value={message} readOnly />
         <div className="modal-buttons">
-          <button className="send-button" onClick={onSend}>Send Email</button>
+          <div onClick={onSend}>
+            <SendEmail 
+              to={'dbn226@lehigh.edu'}
+              subject={subject}
+              message={message}
+            />
+          </div>
           <button className="close-button" onClick={onClose}>Close</button>
         </div>
       </div>

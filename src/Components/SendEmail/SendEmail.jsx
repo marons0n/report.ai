@@ -51,7 +51,7 @@ const SendEmail = ({ to, subject, message, disabled /*accessToken*/ }) => {
 
   return (
     <div>
-      <button onClick={sendEmail} disabled={disabled}>
+      <button className="send-button" onClick={sendEmail}>
         Send Email
       </button>
       <p>{status}</p>
