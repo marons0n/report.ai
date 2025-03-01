@@ -71,6 +71,7 @@
   /* Ensures no extra spacing affects centering */
   margin: 0;
   padding: 0;
+  pointer-events: none;
 }
 
 .prompt-title {
@@ -90,6 +91,7 @@
   gap: 10px;
   max-width: 500px;
   width: 80%;
+  pointer-events: auto;
 }
 
 .center-input {
@@ -140,7 +142,7 @@
   flex: 1;
   width: 50%;
   max-width: 800px;
-  max-height: 1000%;
+  max-height: 450px;
   margin: 20px auto;
   overflow-y: auto;
   display: flex;
