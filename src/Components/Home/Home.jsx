@@ -103,7 +103,7 @@ function Home({ setIsSignedIn }) {
               onChange={(e) => setInputText(e.target.value)}
             />
             <button className="center-button" type="submit" disabled={isLoading}>
-              {isLoading ? '...' : 'Send'}
+              {isLoading ? '...' : 'Prompt'}
             </button>
           </form>
         </div>
