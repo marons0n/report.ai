@@ -34,13 +34,47 @@ function About({ setIsSignedIn }) {
 
                 <div className="about-text">
                     <p>
-                        Report.ai began as an ambitious project for a hackathon, conceived and developed by a team of four junior students at Lehigh University. While our initial goal was to create an innovative solution for the competition - titled 'Hack for Justice', we quickly realized that our idea had the potential to address a critical issue facing universities across the nation.
+                        Report.ai addresses a critical issue facing universities nationwide: the underreporting and ineffective handling of hate crimes on college campuses. This innovative platform, originally conceived and developed by four junior students at Lehigh University for a 'Hack for Justice' hackathon, aims to revolutionize how hate crimes are reported and addressed in academic settings.
+                    </p>
+
+                    <h2>
+                        The problem of hate crimes on college campuses is multifaceted:
+                    </h2>
+                    <ul>
+                        <li>
+                            Underreporting: A significant number of hate crimes go unreported, with studies suggesting that approximately 50% of violent and non-violent hate crimes are not reported to police
+                        </li>
+                        <li>
+                            Limited awareness: Students and faculty often lack knowledge about what constitutes a hate crime and how to report it, further contributing to underreporting
+                        </li>
+                        <li>
+                            Inadequate response: When hate crimes are reported, the response from institutions is sometimes insufficient or inconsistent, discouraging future reporting
+                        </li>
+                    </ul>
+
+                    <h2>
+                        Report.ai offers a solution to these challenges by:
+                    </h2>
+                    <ul>
+                        <li>
+                            Providing an AI-powered platform that makes reporting hate crimes more accessible and less intimidating for students and faculty.
+                        </li>
+                        <li>
+                            Streamlining the reporting process, ensuring that all necessary information is collected efficiently and accurately.
+                        </li>
+                        <li>
+                            Increasing awareness about hate crimes through educational components integrated into the platform.
+                        </li>
+                        <li>
+                            Facilitating a more consistent and effective response to reported incidents by providing institutions with comprehensive, well-organized, documented data.
+                        </li>
+                    </ul>
+
+                    <p>
+                        By leveraging artificial intelligence and user-centered design, Report.ai aims to empower campus communities to combat hate crimes more effectively. The team's vision extends beyond Lehigh University, with plans to implement the solution across campuses nationwide, contributing to safer and more inclusive academic environments.
                     </p>
                     <p>
-                        While the initial spark for report.ai came from a competitive coding event, we quickly realized its potential to address a critical issue facing universities nationwide. Our platform aims to empower students and faculty to report hate crimes efficiently and effectively, leveraging the power of artificial intelligence to ensure that every voice is heard and every incident is addressed with the seriousness it deserves. Our goal extends beyond the hackathon—we aspire to implement this solution at Lehigh University and eventually expand its reach to campuses across the country, creating safer and more inclusive environments for all.
-                    </p>
-                    <p>
-                        Through report.ai, we're not just showcasing our technical skills; we're demonstrating our commitment to making a tangible difference in the fight against hate and discrimination. We believe that by combining innovation with empathy, we can contribute to building a more just and equitable society, starting right here on our college campuses.
+                        This project exemplifies how innovative technology, combined with a deep understanding of social issues, can address complex problems in higher education. We believe that by combining innovation with empathy, we can contribute to building a more just and equitable society, starting right here on our college campuses.
                     </p>
                     <p class="team-signature">-- The report.ai Team</p>
                 </div>
