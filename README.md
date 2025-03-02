@@ -81,8 +81,8 @@ For more information or to report issues, please contact us at [report.ai.site@g
 
 ## References
 
-https://bjs.ojp.gov/topics/crime/hate-crime
-https://lasd.org/transparency/hatecrime/
-https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention
-https://edtrust.org/blog/hate-crimes-on-college-campuses/
-https://edtrust.org/wp-content/uploads/2024/09/Hate-Crimes-Blog-V2.pdf
+https://bjs.ojp.gov/topics/crime/hate-crime  
+https://lasd.org/transparency/hatecrime/  
+https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention  
+https://edtrust.org/blog/hate-crimes-on-college-campuses/  
+https://edtrust.org/wp-content/uploads/2024/09/Hate-Crimes-Blog-V2.pdf  
