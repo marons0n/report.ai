@@ -1,12 +1,7 @@
 # report.ai: AI-Powered Hate Crime Reporting Tool
 
 ## Overview
-
-Report.ai addresses a critical issue facing universities nationwide: the underreporting and ineffective handling of hate crimes on college campuses. This innovative platform, originally conceived and developed by four junior students at Lehigh University for a 'Hack for Justice' hackathon, aims to revolutionize how hate crimes are reported and addressed in academic settings.
-
-While the initial spark for report.ai came from a competitive coding event, we quickly realized its potential to address a critical issue facing universities nationwide. Our platform aims to empower students and faculty to report hate crimes efficiently and effectively, leveraging the power of artificial intelligence to ensure that every voice is heard and every incident is addressed with the seriousness it deserves. Our goal extends beyond the hackathon—we aspire to implement this solution at Lehigh University and eventually expand its reach to campuses across the country, creating safer and more inclusive environments for all.
-
-Through report.ai, we're not just showcasing our technical skills; we're demonstrating our commitment to making a tangible difference in the fight against hate and discrimination. We believe that by combining innovation with empathy, we can contribute to building a more just and equitable society, starting right here on our college campuses.
+Report.ai tackles the widespread issue of underreporting and ineffective handling of hate crimes on college campuses. Using an advanced AI model, it streamlines the reporting process to generate clear, reliable, and effective email reports. Originally developed by four junior students at Lehigh University during the Hack for Justice hackathon, Report.ai aims to transform how hate crimes are reported and addressed in academic settings.
 
 ## Problem
 - Underreporting: A significant number of hate crimes go unreported, with studies suggesting that approximately 50% of violent and non-violent hate crimes are not reported to police
