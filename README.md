@@ -56,7 +56,7 @@ Our mission is to create safer and more inclusive educational environments by:
 
 - Frontend: React.js
 - Backend: Firestore
-- AI Integration: Gemini AI and Gmail
+- API Integration: Gemini AI and Gmail
 - Data Visualization: Chart.js
 - Database: Firebase
 
