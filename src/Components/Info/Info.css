@@ -173,3 +173,27 @@
     }
 }
 
+.hate-crime-definition {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .hate-crime-definition h2 {
+    color: #ff4b4b;
+    margin-bottom: 15px;
+  }
+  
+  .hate-crime-definition h3 {
+    color: #ff4b4b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .hate-crime-definition p {
+    margin-bottom: 10px;
+  }
+  
+

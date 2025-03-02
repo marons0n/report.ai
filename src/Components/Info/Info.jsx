@@ -8,6 +8,23 @@ import { getReportStats } from '../../firebase';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, LineElement, PointElement, Title, Tooltip, Legend);
 
+
+const hateCrimeDefinition = `
+  <h2>What is a Hate Crime?</h2>
+  <p>A crime + Motivation for committing the crime based on bias = Hate crime</p>
+  <p>In the simplest terms, a hate crime must include both "hate" and a "crime."</p>
+  
+  <h3>Hate</h3>
+  <p>The term "hate" can be misleading. When used in a hate crime law, the word "hate" does not mean rage, anger, or general dislike. In this context "hate" means bias against people or groups with specific characteristics that are defined by the law.</p>
+  <p>At the federal level, hate crime laws include crimes committed on the basis of the victim's perceived or actual race, color, religion, national origin, sexual orientation, gender, gender identity, or disability.</p>
+  <p>Most state hate crime laws include crimes committed on the basis of race, color, and religion; many also include crimes committed on the basis of sexual orientation, gender, gender identity, and disability.</p>
+  
+  <h3>Crime</h3>
+  <p>The "crime" in hate crime is often a violent crime, such as assault, murder, arson, vandalism, or threats to commit such crimes. It may also cover conspiring or asking another person to commit such crimes, even if the crime was never carried out.</p>
+`;
+
+
+
 function Info({ setIsSignedIn }) {
     const [reportStats, setReportStats] = useState({ totalReports: 0 });
 
@@ -166,6 +183,8 @@ function Info({ setIsSignedIn }) {
 
                     </div>
                 </div>
+
+                <div className="hate-crime-definition" dangerouslySetInnerHTML={{ __html: hateCrimeDefinition }}></div>
 
                 <div className="info-text">
                      <ul>
