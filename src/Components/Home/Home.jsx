@@ -103,7 +103,7 @@ function Home({ setIsSignedIn }) {
               onChange={(e) => setInputText(e.target.value)}
             />
             <button className="center-button" type="submit" disabled={isLoading}>
-              {isLoading ? '...' : 'Send'}
+              {isLoading ? '...' : 'Prompt'}
             </button>
           </form>
         </div>
@@ -133,7 +133,7 @@ function Home({ setIsSignedIn }) {
               onChange={(e) => setInputText(e.target.value)}
             />
             <button type="submit" className="send-button" disabled={isLoading}>
-              {isLoading ? '...' : 'Send'}
+              {isLoading ? '...' : 'Prompt'}
             </button>
 
             {/* Gmail button (reopens email modal) */}
@@ -159,6 +159,7 @@ function Home({ setIsSignedIn }) {
         <EmailModal
           subject={emailSubject}
           message={emailContent}
+          setMessage={setEmailContent}
           onClose={() => setShowEmailModal(false)}
           onSend={() => {
             console.log('Email Sent!');

@@ -1,13 +1,18 @@
 # report.ai: AI-Powered Hate Crime Reporting Tool
 
 ## Overview
+Report.ai tackles the widespread issue of underreporting and ineffective handling of hate crimes on college campuses. Using an advanced AI model, it streamlines the reporting process to generate clear, reliable, and effective email reports. Originally developed by four junior students at Lehigh University during the Hack for Justice hackathon, Report.ai aims to transform how hate crimes are reported and addressed in academic settings.
 
-Report.ai began as an ambitious project for a hackathon, conceived and developed by a team of four junior students at Lehigh University. While our initial goal was to create an innovative solution for the competition - titled 'Hack for Justice', we quickly realized that our idea had the potential to address a critical issue facing universities across the nation.
+## Problem
+- Underreporting: A significant number of hate crimes go unreported, with studies suggesting that approximately 50% of violent and non-violent hate crimes are not reported to police
+- Limited awareness: Students and faculty often lack knowledge about what constitutes a hate crime and how to report it, further contributing to underreporting
+- Inadequate response: When hate crimes are reported, the response from institutions is sometimes insufficient or inconsistent, discouraging future reporting
 
-While the initial spark for report.ai came from a competitive coding event, we quickly realized its potential to address a critical issue facing universities nationwide. Our platform aims to empower students and faculty to report hate crimes efficiently and effectively, leveraging the power of artificial intelligence to ensure that every voice is heard and every incident is addressed with the seriousness it deserves. Our goal extends beyond the hackathon—we aspire to implement this solution at Lehigh University and eventually expand its reach to campuses across the country, creating safer and more inclusive environments for all.
-
-Through report.ai, we're not just showcasing our technical skills; we're demonstrating our commitment to making a tangible difference in the fight against hate and discrimination. We believe that by combining innovation with empathy, we can contribute to building a more just and equitable society, starting right here on our college campuses.
-
+## Solution
+- Providing an AI-powered platform that makes reporting hate crimes more accessible and less intimidating for students and faculty.
+- Streamlining the reporting process, ensuring that all necessary information is collected efficiently and accurately.
+- Increasing awareness about hate crimes through educational components integrated into the platform.
+- Facilitating a more consistent and effective response to reported incidents by providing institutions with comprehensive, well-organized, documented data.
 
 ## Mission
 
@@ -46,9 +51,12 @@ Our mission is to create safer and more inclusive educational environments by:
 
 - Frontend: React.js
 - Backend: Firestore
-- AI Integration: Gemini AI and Gmail
+- API Integration: Gemini AI and Gmail
 - Data Visualization: Chart.js
 - Database: Firebase
+
+## Demo  
+Check out our web application [here](https://gen-lang-client-0170544513.web.app/).
 
 ## Team
 
@@ -71,6 +79,8 @@ For more information or to report issues, please contact us at [report.ai.site@g
 
 ## References
 
-https://bjs.ojp.gov/topics/crime/hate-crime
-https://lasd.org/transparency/hatecrime/
-https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention
+https://bjs.ojp.gov/topics/crime/hate-crime  
+https://lasd.org/transparency/hatecrime/  
+https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention  
+https://edtrust.org/blog/hate-crimes-on-college-campuses/  
+https://edtrust.org/wp-content/uploads/2024/09/Hate-Crimes-Blog-V2.pdf  
