@@ -32,7 +32,11 @@ function About({ setIsSignedIn }) {
                     </div>
                 </div>
 
+
                 <div className="about-text">
+                    <h2>
+                        Our Mission
+                    </h2>
                     <p>
                         Report.ai addresses a critical issue facing universities nationwide: the underreporting and ineffective handling of hate crimes on college campuses. This innovative platform, originally conceived and developed by four junior students at Lehigh University for a 'Hack for Justice' hackathon, aims to revolutionize how hate crimes are reported and addressed in academic settings.
                     </p>
