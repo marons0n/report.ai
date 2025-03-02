@@ -8,6 +8,16 @@ While the initial spark for report.ai came from a competitive coding event, we q
 
 Through report.ai, we're not just showcasing our technical skills; we're demonstrating our commitment to making a tangible difference in the fight against hate and discrimination. We believe that by combining innovation with empathy, we can contribute to building a more just and equitable society, starting right here on our college campuses.
 
+## Problem
+- Underreporting: A significant number of hate crimes go unreported, with studies suggesting that approximately 50% of violent and non-violent hate crimes are not reported to police
+- Limited awareness: Students and faculty often lack knowledge about what constitutes a hate crime and how to report it, further contributing to underreporting
+- Inadequate response: When hate crimes are reported, the response from institutions is sometimes insufficient or inconsistent, discouraging future reporting
+
+## Solution
+- Providing an AI-powered platform that makes reporting hate crimes more accessible and less intimidating for students and faculty.
+- Streamlining the reporting process, ensuring that all necessary information is collected efficiently and accurately.
+- Increasing awareness about hate crimes through educational components integrated into the platform.
+- Facilitating a more consistent and effective response to reported incidents by providing institutions with comprehensive, well-organized, documented data.
 
 ## Mission
 
@@ -74,3 +84,5 @@ For more information or to report issues, please contact us at [report.ai.site@g
 https://bjs.ojp.gov/topics/crime/hate-crime
 https://lasd.org/transparency/hatecrime/
 https://www.theiacp.org/resources/responding-to-hate-crimes-a-police-officers-guide-to-investigation-and-prevention
+https://edtrust.org/blog/hate-crimes-on-college-campuses/
+https://edtrust.org/wp-content/uploads/2024/09/Hate-Crimes-Blog-V2.pdf
