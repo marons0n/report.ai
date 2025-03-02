@@ -2,7 +2,7 @@
 
 ## Overview
 
-Report.ai began as an ambitious project for a hackathon, conceived and developed by a team of four junior students at Lehigh University. While our initial goal was to create an innovative solution for the competition - titled 'Hack for Justice', we quickly realized that our idea had the potential to address a critical issue facing universities across the nation.
+Report.ai addresses a critical issue facing universities nationwide: the underreporting and ineffective handling of hate crimes on college campuses. This innovative platform, originally conceived and developed by four junior students at Lehigh University for a 'Hack for Justice' hackathon, aims to revolutionize how hate crimes are reported and addressed in academic settings.
 
 While the initial spark for report.ai came from a competitive coding event, we quickly realized its potential to address a critical issue facing universities nationwide. Our platform aims to empower students and faculty to report hate crimes efficiently and effectively, leveraging the power of artificial intelligence to ensure that every voice is heard and every incident is addressed with the seriousness it deserves. Our goal extends beyond the hackathon—we aspire to implement this solution at Lehigh University and eventually expand its reach to campuses across the country, creating safer and more inclusive environments for all.
 
@@ -59,6 +59,9 @@ Our mission is to create safer and more inclusive educational environments by:
 - API Integration: Gemini AI and Gmail
 - Data Visualization: Chart.js
 - Database: Firebase
+
+## Demo  
+Check out our web application [here](https://gen-lang-client-0170544513.web.app/).
 
 ## Team
 
