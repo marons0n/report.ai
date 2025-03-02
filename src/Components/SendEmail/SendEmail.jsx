@@ -21,7 +21,7 @@ const SendEmail = ({ to, subject, message, disabled /*accessToken*/ }) => {
       message,
     ].join("\n");
 
-    const base64EncodedEmail = btoa(emailContent).replace(/\+/g, "-").replace(/\//g, "_");
+    const base64EncodedEmail = btoa(unescape(encodeURIComponent(emailContent))).replace(/\+/g, "-").replace(/\//g, "_");
 
     try {
       // Send email using the Gmail API with fetch
